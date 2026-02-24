@@ -1,0 +1,150 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotation {
+    0%      { --gradient-angle: 0deg; }
+    100%    { --gradient-angle: 360deg; }
+}
+
+@font-face {
+    font-family: Glitch;
+    src: url(glitch.ttf);
+}
+
+@font-face {
+    font-family: Bastard;
+    src: url(bastard.ttf);
+}
+
+:root {
+    --clr-bg: #120020;
+    --clr-lg: #160030;
+    --clr-sg: #210047;
+    
+    --clr-01: #a800a8;
+    --clr-02: #6c57d1;
+    --clr-03: #0078d8;
+    --clr-04: #008cc1;
+    --clr-05: #0e9aaa;
+    
+    --text-color: #d6b7ff;
+}
+
+body {
+    background: var(--clr-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.title {
+    margin-top: 2em;
+    margin-bottom: 1.75em;
+    width: 30vh;
+    height: 7.5vh;
+    background: var(--clr-lg);
+    border-radius: 10rem;
+    color: var(--text-color);
+    font-family: Glitch;
+    font-size: 3em;
+    
+    text-align: center;
+    align-content: center;
+
+    position: relative;
+    transition: all 0.5s;
+}
+
+.title::before,
+.title::after {
+    content: "";
+    position: absolute;
+    inset: -0.25rem;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-01),
+        var(--clr-02),
+        var(--clr-03),
+        var(--clr-04),
+        var(--clr-05),
+        var(--clr-04),
+        var(--clr-03),
+        var(--clr-02),
+        var(--clr-01));
+    border-radius: inherit;
+    animation: rotation 20s linear infinite;
+    z-index: -1;
+}
+
+.title::after {
+    filter: blur(3.5rem);
+}
+
+.title:hover {
+    transition: all 0.5s;
+    width: 32vh;
+    height: 8vh;
+    margin-top: 1.75em;
+    margin-bottom: 2em;
+}
+
+
+
+.card {
+    height: 60vh;
+    aspect-ratio: 1.5 / 1;
+    background: var(--clr-lg);
+    border-radius: 3.5rem;
+
+    position: relative;
+    text-align: center;
+}
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    inset: -0.5rem;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-01),
+        var(--clr-02),
+        var(--clr-03),
+        var(--clr-04),
+        var(--clr-05),
+        var(--clr-04),
+        var(--clr-03),
+        var(--clr-02),
+        var(--clr-01));
+    border-radius: inherit;
+    animation: rotation 20s linear infinite;
+    z-index: -1;
+}
+
+.card::after {
+    filter: blur(3.5rem);
+}
+
+
+.link {
+    margin-top: 2em;
+    margin-bottom: 1.75em;
+    width: 30vh;
+    height: 7.5vh;
+    border-radius: 10rem;
+    color: var(--text-color);
+    font-family: Bastard;
+    font-size: 3em;
+    text-decoration: none;
+    
+    text-align: center;
+    align-content: center;
+
+    position: relative;
+    transition: all 0.5s;
+}
