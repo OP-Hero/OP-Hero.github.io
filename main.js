@@ -1,0 +1,38 @@
+
+
+(function () {
+    addLinks();
+})();
+
+
+
+
+function addLinks() {
+    addLink("Check out my first mod", "https://gdp.ophero.uk");
+    addLink("--------------------------------------");
+    addLink("Join my Discord server i guess", "https://discord.gg/7TNTK6uBdP");
+    
+    addLink("--------That's it for now--------");
+    addLink("");
+    addLink("");
+    addLink("");
+    addLink("");
+}
+
+
+function addLink(text, link = false) {
+    let card = document.getElementById("links");
+    let linkElem = document.createElement("a");
+    
+    if (link) {
+        linkElem.href = link;
+    }
+    
+    linkElem.innerHTML = text;
+    linkElem.classList.add("link");
+    let br = document.createElement("br");
+    
+    card.appendChild(linkElem);
+    card.appendChild(br);
+    card.appendChild(br);
+}

@@ -35,7 +35,6 @@
 
 body {
     background: var(--clr-bg);
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,15 +42,15 @@ body {
 }
 
 .title {
-    margin-top: 2em;
-    margin-bottom: 1.75em;
-    width: 30vh;
-    height: 7.5vh;
+    margin-top: 100px;
+    margin-bottom: 75px;
+    width: 300px;
+    height: 75px;
     background: var(--clr-lg);
-    border-radius: 10rem;
+    border-radius: 100px;
     color: var(--text-color);
     font-family: Glitch;
-    font-size: 3em;
+    font-size: 48px;
     
     text-align: center;
     align-content: center;
@@ -64,7 +63,7 @@ body {
 .title::after {
     content: "";
     position: absolute;
-    inset: -0.25rem;
+    inset: -7.5px;
     background: conic-gradient(
         from var(--gradient-angle),
         var(--clr-01),
@@ -82,34 +81,34 @@ body {
 }
 
 .title::after {
-    filter: blur(3.5rem);
+    filter: blur(50px);
 }
 
 .title:hover {
     transition: all 0.5s;
-    width: 32vh;
-    height: 8vh;
-    margin-top: 1.75em;
-    margin-bottom: 2em;
+    width: 320px;
+    height: 75px;
+    margin-top: 75px;
+    margin-bottom: 100px;
+    font-size: 56px;
 }
 
 
 
 .card {
-    height: 60vh;
+    height: 600px;
     aspect-ratio: 1.5 / 1;
     background: var(--clr-lg);
-    border-radius: 3.5rem;
+    border-radius: 75px;
 
     position: relative;
-    text-align: center;
 }
 
 .card::before,
 .card::after {
     content: "";
     position: absolute;
-    inset: -0.5rem;
+    inset: -7.5px;
     background: conic-gradient(
         from var(--gradient-angle),
         var(--clr-01),
@@ -127,23 +126,45 @@ body {
 }
 
 .card::after {
-    filter: blur(3.5rem);
+    filter: blur(50px);
 }
 
+.card-child {
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+}
+
+.card-fade {
+    background: linear-gradient(to top, var(--clr-lg), transparent);
+    width: 80%;
+    position: absolute;
+    height: 100px;
+    display: block;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    pointer-events: none;
+    z-index: 2;
+}
 
 .link {
-    margin-top: 2em;
-    margin-bottom: 1.75em;
-    width: 30vh;
-    height: 7.5vh;
-    border-radius: 10rem;
     color: var(--text-color);
     font-family: Bastard;
-    font-size: 3em;
+    font-size: 48px;
+    text-decoration: none;
     
     text-align: center;
     align-content: center;
 
     position: relative;
     transition: all 0.5s;
+}
+
+.link:hover {
+    transition: all 0.5s;
+    font-size: 56px;
 }
