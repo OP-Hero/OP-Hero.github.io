@@ -22,13 +22,15 @@
 :root {
     --clr-bg: #120020;
     --clr-lg: #160030;
-    --clr-sg: #210047;
     
-    --clr-01: #a800a8;
-    --clr-02: #6c57d1;
-    --clr-03: #0078d8;
-    --clr-04: #008cc1;
-    --clr-05: #0e9aaa;
+    --clr-01: #ac3232;
+    --clr-02: #df7126;
+    --clr-03: #fbf236;
+    --clr-04: #6abe30;
+    --clr-05: #5b6ee1;
+    --clr-06: #3f3f74;
+    --clr-07: #76428a;
+    --clr-08: #d77bba;
     
     --text-color: #d6b7ff;
 }
@@ -38,59 +40,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
 }
 
-.title {
-    margin-top: 100px;
-    margin-bottom: 75px;
-    width: 300px;
-    height: 75px;
-    background: var(--clr-lg);
-    border-radius: 100px;
-    color: var(--text-color);
-    font-family: Glitch;
-    font-size: 48px;
-    
-    text-align: center;
-    align-content: center;
-
-    position: relative;
-    transition: all 0.5s;
-}
-
-.title::before,
-.title::after {
-    content: "";
-    position: absolute;
-    inset: -7.5px;
-    background: conic-gradient(
-        from var(--gradient-angle),
-        var(--clr-01),
-        var(--clr-02),
-        var(--clr-03),
-        var(--clr-04),
-        var(--clr-05),
-        var(--clr-04),
-        var(--clr-03),
-        var(--clr-02),
-        var(--clr-01));
-    border-radius: inherit;
-    animation: rotation 20s linear infinite;
-    z-index: -1;
-}
-
-.title::after {
-    filter: blur(50px);
-}
-
-.title:hover {
-    transition: all 0.5s;
-    width: 320px;
-    height: 75px;
-    margin-top: 75px;
-    margin-bottom: 100px;
-    font-size: 56px;
+* {
+    scrollbar-width: none;
 }
 
 
@@ -100,6 +53,7 @@ body {
     aspect-ratio: 1.5 / 1;
     background: var(--clr-lg);
     border-radius: 75px;
+    margin-top: 50px;
 
     position: relative;
 }
@@ -116,9 +70,9 @@ body {
         var(--clr-03),
         var(--clr-04),
         var(--clr-05),
-        var(--clr-04),
-        var(--clr-03),
-        var(--clr-02),
+        var(--clr-06),
+        var(--clr-07),
+        var(--clr-08),
         var(--clr-01));
     border-radius: inherit;
     animation: rotation 20s linear infinite;
@@ -167,4 +121,21 @@ body {
 .link:hover {
     transition: all 0.5s;
     font-size: 56px;
+}
+
+
+.logo {
+    margin-top: 25px;
+    width: 200px;
+    height: 200px;
+    transition: all 0.5s;
+    margin-bottom: 25px;
+}
+
+.logo:hover {
+    width: 250px;
+    height: 250px;
+    transition: all 0.5s;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
