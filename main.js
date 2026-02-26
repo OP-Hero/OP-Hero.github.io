@@ -8,7 +8,7 @@
 
 
 function addLinks() {
-    addLink("Check out my first mod", "https://gdp.ophero.uk");
+    addLink("Check out my modrinth", "https://modrinth.com/user/OP_Hero");
     addLink("--------------------------------------");
     addLink("Join my Discord server i guess", "https://discord.gg/7TNTK6uBdP");
     
