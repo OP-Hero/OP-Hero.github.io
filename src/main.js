@@ -9,10 +9,13 @@
 
 function addLinks() {
     addLink("Check out my modrinth", "https://modrinth.com/user/OP_Hero");
-    addLink("--------------------------------------");
-    addLink("Join my Discord server i guess", "https://discord.gg/7TNTK6uBdP");
+    addLink("-----------------------------");
+    addLink("Join my Discord server", "https://discord.gg/7TNTK6uBdP");
+    addLink("-----------------------------");
+    addLink("Follow me on GitHub", "https://github.com/OP-Hero");
+    addLink("-----------------------------");
     
-    addLink("--------That's it for now--------");
+    addLink("----That's it for now----");
     addLink("");
     addLink("");
     addLink("");
