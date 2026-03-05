@@ -9,6 +9,8 @@
 
 function addLinks() {
     addLink("Links", "links");
+    addLink("-----------------------------")
+    addLink("Info", "subdomains");
     
     addLink("");
     addLink("");

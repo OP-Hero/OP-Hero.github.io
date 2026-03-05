@@ -14,11 +14,6 @@
     src: url(glitch.ttf);
 }
 
-@font-face {
-    font-family: Bastard;
-    src: url(bastard.ttf);
-}
-
 :root {
     --clr-bg: #120020;
     --clr-lg: #160030;
@@ -107,7 +102,7 @@ body {
 
 .link {
     color: var(--text-color);
-    font-family: Bastard;
+    font-family: Glitch;
     font-size: 48px;
     text-decoration: none;
     
