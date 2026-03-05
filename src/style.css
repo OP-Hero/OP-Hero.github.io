@@ -89,13 +89,13 @@ body {
 
 .card-fade {
     background: linear-gradient(to top, var(--clr-lg), transparent);
-    width: 80%;
+    width: 100%;
+    border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 75px;
     position: absolute;
     height: 100px;
     display: block;
     bottom: 0;
-    left: 10%;
-    right: 10%;
     pointer-events: none;
     z-index: 2;
 }
