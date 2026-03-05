@@ -8,10 +8,14 @@
 
 
 function addLinks() {
+    addLink("");
     addLink("Links", "links");
-    addLink("-----------------------------")
+    addLink("");
+    addLink("----------------");
+    addLink("");
     addLink("Info", "subdomains");
-    
+    addLink("");
+    addLink("----------------");
     addLink("");
     addLink("");
     addLink("");

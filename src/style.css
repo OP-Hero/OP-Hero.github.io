@@ -10,8 +10,8 @@
 }
 
 @font-face {
-    font-family: Glitch;
-    src: url(glitch.ttf);
+    font-family: Cover;
+    src: url(Cover.ttf);
 }
 
 :root {
@@ -28,6 +28,9 @@
     --clr-08: #d77bba;
     
     --text-color: #d6b7ff;
+    
+    --bled: 0;
+    --scan: 0;
 }
 
 body {
@@ -102,7 +105,7 @@ body {
 
 .link {
     color: var(--text-color);
-    font-family: Glitch;
+    font-family: Cover;
     font-size: 48px;
     text-decoration: none;
     
@@ -111,6 +114,10 @@ body {
 
     position: relative;
     transition: all 0.5s;
+    
+    font-variation-settings: 
+    "BLED" var(--bled),
+    "SCAN" var(--scan);
 }
 
 .link:hover {
