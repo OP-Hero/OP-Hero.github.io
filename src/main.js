@@ -1,4 +1,4 @@
-document.getElementsByTagName("a")[0].href = window.location.host;
+document.getElementsByTagName("a")[0].href = window.location.protocol + window.location.host;
 
 (function () {
     addLinks();
